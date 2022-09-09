@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.container {
+  width: 1302px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-page {
+  background-color: #161516;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  padding-top: 48px;
+  margin-bottom: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header__title {
+  font-family: Montserrat;
+  color: #FFFFFF;
+  font-size: 31px;
+}
+
+img:last-child {
+  display: block;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.header__upper-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.header__items, .header__price {
+  font-family: Montserrat;
+  color: #FFFFFF;
+  font-size: 17px;
+  text-align: end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header__bucket {
+  width: 50px;;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  column-gap: 16px;
+  height: calc(100vh - 238px);
+  overflow-x: auto;
+  padding-bottom: 65px;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+  -webkit-overflow-scrolling: touch;
 }
