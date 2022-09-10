@@ -1,10 +1,11 @@
 import Card from '../src/components/Card.js';
 import './App.css';
 import './components/Card.css';
-import oystersImage from '../src/images/1.png';
-import ribsImage from '../src/images/2.png';
-import shrimpsImage from '../src/images/3.png';
+// import oystersImage from '../src/images/1.png';
+// import ribsImage from '../src/images/2.png';
+// import shrimpsImage from '../src/images/3.png';
 import bucketIcon from './images/bucketIcon.svg';
+import {Products} from './components/Products.js';
 
 function App() {
   return (
@@ -21,7 +22,19 @@ function App() {
           </div>
         </header>
         <div className="menu">
-          <Card 
+          {Products.map(key => {
+            const {img, name, description, price, weight} = key
+            return (
+              <Card
+                url={img}
+                title={name}
+                description={description}
+                price={price}
+                weight={weight}
+              />
+              )
+          })}
+           {/* <Card
           url={oystersImage}
           title={'Устрицы по рокфеллеровски'}
           description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
@@ -76,7 +89,7 @@ function App() {
           description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
           price={'2 700 ₽'}
           weight={'/ 500 г.'}
-          />
+          /> */}
         </div>
       </div>
     </main>
