@@ -1,4 +1,4 @@
-import addToBucketIcon from '../images/regularAddIcon.svg'
+import addToBucketIcon from '../icons/regularAddIcon.svg'
 
 function Card({url, title, description, price, weight}) {
   return (

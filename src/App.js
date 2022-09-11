@@ -4,7 +4,7 @@ import './components/Card.css';
 // import oystersImage from '../src/images/1.png';
 // import ribsImage from '../src/images/2.png';
 // import shrimpsImage from '../src/images/3.png';
-import bucketIcon from './images/bucketIcon.svg';
+import bucketIcon from './icons/bucketIcon.svg';
 import {Products} from './components/Products.js';
 
 function App() {
