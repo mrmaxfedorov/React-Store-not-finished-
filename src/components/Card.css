@@ -1,13 +1,20 @@
-.card {
+/* .card {
   border: 1px solid #D58C51;
   width: 311px;
   height: 550px;
   position: relative;
-}
+} */
+
 
 .card__img {
   padding: 42px 0 30px 20px;
 }
+
+/* .card:hover .card__title,
+.card:hover .card__description,
+.card:hover .card__bottom {
+  color: #D58C51
+} */
 
 .card__icon:hover {
   background: url(../icons/hoveredAddIcon.svg);
@@ -62,4 +69,9 @@
   right: 30px;
   position: absolute;
   bottom: 32px;
+}
+
+.card__button {
+  padding: 0;
+  border: 0;
 }
