@@ -1,55 +1,45 @@
-.container {
+import styled from "styled-components";
+
+export const MainPage = styled.main`
+  background-color: #161516;
+`;
+export const Container = styled.div`
   width: 1302px;
   margin: 0 auto;
-}
-
-.main-page {
-  background-color: #161516;
-}
-
-.header {
+`;
+export const Header = styled.header`
   padding-top: 48px;
   margin-bottom: 75px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.header__title {
+`;
+export const HeaderTitle = styled.h1`
   font-family: Montserrat;
   color: #FFFFFF;
   font-size: 31px;
-}
-
-img:last-child {
-  display: block;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-.header__upper-right {
+`;
+export const HeaderUpperRight = styled.div`
   display: flex;
   flex-direction: row;
-}
-
-.header__text {
+`;
+export const HeaderText = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 20px;
-}
-
-.header__items, .header__price {
+`;
+export const HeaderItems = styled.p`
   font-family: Montserrat;
   color: #FFFFFF;
   font-size: 17px;
   text-align: end;
-}
-
-.header__bucket {
-  width: 50px;;
-}
-
-.menu {
+`;
+export const HeaderPrice = HeaderItems;
+export const HeaderGoToCartButton = styled.img`
+  width: 50px;
+  cursor: pointer;
+`;
+export const Menu = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
@@ -57,9 +47,9 @@ img:last-child {
   height: calc(100vh - 238px);
   overflow-x: auto;
   padding-bottom: 65px;
-}
 
-.menu::-webkit-scrollbar {
+  &::-webkit-scrollbar {
   display: none;
   -webkit-overflow-scrolling: touch;
-}
+  }
+`;
