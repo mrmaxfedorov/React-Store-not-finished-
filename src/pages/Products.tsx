@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import bucketIcon from '../icons/bucketIcon.svg'
 import {ProductsList} from '../components/Products';
 import {Card} from '../components/Card';
 import { MainPage, Container, Header, HeaderTitle, HeaderUpperRight, HeaderText, HeaderItems, HeaderPrice, HeaderGoToCartButton, Menu } from './Products.styled';
 
 export const Products = () => {
+  const [totalSum, setTotalSum] = useState(0)
+  const [totalItems, setTotalItems] = useState(0)
+
   const addPriceProduct = (price: string) => {
-    console.log(price)
+    setTotalSum (totalSum + Number(price))
+    setTotalItems (totalItems + 1)
   }
 
   return (
@@ -16,10 +21,12 @@ export const Products = () => {
           <HeaderTitle>НАША ПРОДУКЦИЯ</HeaderTitle>
           <HeaderUpperRight>
             <HeaderText>
-              <HeaderItems>3 товара</HeaderItems>
-              <HeaderPrice>на сумму 3 500 ₽</HeaderPrice>
+              <HeaderItems>{totalItems} товара</HeaderItems>
+              <HeaderPrice>на сумму {totalSum} ₽</HeaderPrice>
             </HeaderText>
-            <HeaderGoToCartButton src={bucketIcon} alt='' />
+            <Link to='/cart'>
+              <HeaderGoToCartButton src={bucketIcon} alt='' />
+            </Link>
           </HeaderUpperRight>
         </Header>
         <Menu>

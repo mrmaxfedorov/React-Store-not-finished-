@@ -1,5 +1,6 @@
 import React from 'react';
 import { FC } from 'react';
+import { Link } from "react-router-dom";
 import { CartProductsList } from 'src/components/CartProducts';
 import arrowBack from '../icons/arrowLeft.svg';
 import { OrangeButton } from 'src/components/ui/Button';
@@ -11,7 +12,9 @@ export const Cart: FC = () => {
     <CartPage>
       <Container>
         <Header>
-          <ArrowLeft src={arrowBack} />
+          <Link to='/'>
+            <ArrowLeft src={arrowBack} />
+          </Link>
           <HeaderTitle>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</HeaderTitle>
         </Header>
         <CartList>

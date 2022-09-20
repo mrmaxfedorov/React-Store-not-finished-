@@ -1,7 +1,7 @@
-import addToBucketIcon from '../icons/regularAddIcon.svg';
-import styled from 'styled-components';
 import { FC } from 'react';
 import React from 'react';
+import addToBucketIcon from '../icons/regularAddIcon.svg';
+import styled from 'styled-components';
 import HoveredAddIcon from '../icons/hoveredAddIcon.svg';
 
 interface ICardStyled {
@@ -66,7 +66,6 @@ const CardIcon = styled.img`
   position: absolute;
   bottom: 32px;
   cursor: pointer;
-
   &:hover {
     background: url(${HoveredAddIcon});
   }
@@ -75,7 +74,6 @@ const CardButton = styled.button`
   padding: 0;
   border: 0;
 `
-
 
 interface ICardProps {
   url: string,
