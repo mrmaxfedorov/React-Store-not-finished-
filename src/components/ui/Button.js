@@ -1,10 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import { FC } from 'react';
 
-interface ButtonProps {
-  text: string;
-}
 
 const Button = styled.button`
   width: 200px;
@@ -19,8 +15,10 @@ const Button = styled.button`
 ;
 `
 
-export const OrangeButton: FC <ButtonProps> = ({text}) => {
+const OrangeButton = ({text}) => {
   return (
       <Button>{text}</Button>
     )
 }
+
+export default OrangeButton

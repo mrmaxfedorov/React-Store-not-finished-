@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import bucketIcon from '../icons/bucketIcon.svg'
 import {ProductsList} from '../components/Products';
 import {Card} from '../components/Card';
 import { MainPage, Container, Header, HeaderTitle, HeaderUpperRight, HeaderText, HeaderItems, HeaderPrice, HeaderGoToCartButton, Menu } from './Products.styled';
 
 export const Products = () => {
-  const [totalSum, setTotalSum] = useState(0)
-  const [totalItems, setTotalItems] = useState(0)
 
-  const addPriceProduct = (price: string) => {
-    setTotalSum (totalSum + Number(price))
-    setTotalItems (totalItems + 1)
-  }
+  const totalCartSum = useSelector(state => state.cart.totalCartSum)
+  const totalCartItems = useSelector(state => state.cart.totalCartItems)
 
   return (
     <MainPage>
@@ -21,8 +18,8 @@ export const Products = () => {
           <HeaderTitle>НАША ПРОДУКЦИЯ</HeaderTitle>
           <HeaderUpperRight>
             <HeaderText>
-              <HeaderItems>{totalItems} товара</HeaderItems>
-              <HeaderPrice>на сумму {totalSum} ₽</HeaderPrice>
+              <HeaderItems>{totalCartItems} товара</HeaderItems>
+              <HeaderPrice>на сумму {totalCartSum} ₽</HeaderPrice>
             </HeaderText>
             <Link to='/cart'>
               <HeaderGoToCartButton src={bucketIcon} alt='' />
@@ -39,7 +36,6 @@ export const Products = () => {
                 description={description}
                 price={price}
                 weight={weight}
-                handleclick={(e: any) => addPriceProduct(price)}
               />
             )
           })}

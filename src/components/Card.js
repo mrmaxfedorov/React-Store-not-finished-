@@ -1,14 +1,12 @@
-import { FC } from 'react';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../store/reducers/cart.js'
 import addToBucketIcon from '../icons/regularAddIcon.svg';
 import styled from 'styled-components';
 import HoveredAddIcon from '../icons/hoveredAddIcon.svg';
+import { v4 as uuidv4 } from 'uuid'
 
-interface ICardStyled {
-  isActive?: boolean;
-}
-
-const CardWrapper = styled.div<ICardStyled>`
+const CardWrapper = styled.div`
   border: 1px solid #D58C51;
   width: 311px;
   height: 550px;
@@ -28,6 +26,7 @@ const CardTitle = styled.h2`
   ${CardBigText};
   padding-right: 20px;
   margin-bottom: 9px;
+  
 `;
 const CardPrice = styled.p`
   ${CardBigText};
@@ -75,16 +74,22 @@ const CardButton = styled.button`
   border: 0;
 `
 
-interface ICardProps {
-  url: string,
-  title: string,
-  description: string,
-  price: string,
-  weight: string,
-  handleclick: any,
-}
+export const Card = ({ url, title, description, price, weight }) => {
 
-export const Card: FC<ICardProps> = ({ url, title, description, price, weight, handleclick }) => {
+  const dispatch = useDispatch()
+
+  const handleAddToCart = () => {
+
+    let item = {
+      id: uuidv4(),
+      title: title,
+      url: url,
+      price: price
+    }
+
+    dispatch(addToCart(item))
+  }
+
   return (
     <CardWrapper>
       <CardImage src={url} alt="" />
@@ -97,7 +102,7 @@ export const Card: FC<ICardProps> = ({ url, title, description, price, weight, h
           <CardPrice>{price}  ₽</CardPrice>
           <CardWeight>/ {weight}</CardWeight>
         </CardBottomLeft>
-        <CardButton onClick={handleclick} className="card__button">
+        <CardButton onClick={handleAddToCart} className="card__button">
           <CardIcon src={addToBucketIcon} alt="" />
         </CardButton>
       </CardBottom>

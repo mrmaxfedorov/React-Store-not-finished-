@@ -1,4 +1,4 @@
-export const CartProductsList = [
+const CartProductsList = [
   {
     "name": "Устрицы по рокфеллеровски",
     "price": "2 700",
@@ -16,3 +16,5 @@ export const CartProductsList = [
   }
 
 ]
+
+export default CartProductsList

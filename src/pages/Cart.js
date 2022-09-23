@@ -1,13 +1,16 @@
 import React from 'react';
-import { FC } from 'react';
 import { Link } from "react-router-dom";
-import { CartProductsList } from 'src/components/CartProducts';
+// import CartProductsList from '../components/CartProducts';
 import arrowBack from '../icons/arrowLeft.svg';
-import { OrangeButton } from 'src/components/ui/Button';
+import OrangeButton from '../components/ui/Button';
 import { CartPage, Container, Header, ArrowLeft, HeaderTitle, CartList, ContainerBottom, CartFooter, CartTotal, CartPrice } from './Cart.styled';
 import { CartItem } from '../components/CartItem'
+import { useSelector } from 'react-redux';
 
-export const Cart: FC = () => {
+export const Cart = () => {
+
+  const { cart, totalCartSum } = useSelector(state => state.cart)
+
   return (
     <CartPage>
       <Container>
@@ -18,12 +21,13 @@ export const Cart: FC = () => {
           <HeaderTitle>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</HeaderTitle>
         </Header>
         <CartList>
-          {CartProductsList.map(key => {
-            const { img, name, price } = key
+          {cart.map(item => {
+            const { id, url, title, price } = item
             return (
               <CartItem
-                url={img}
-                title={name}
+                id={id}
+                url={url}
+                title={title}
                 price={price}
               />
             )
@@ -32,7 +36,7 @@ export const Cart: FC = () => {
       </Container>
       <ContainerBottom>
         <CartFooter>
-          <CartTotal>ЗАКАЗ НА СУММУ: <CartPrice> 6 220 ₽</CartPrice>
+          <CartTotal>ЗАКАЗ НА СУММУ: <CartPrice> {totalCartSum} ₽</CartPrice>
           </CartTotal>
           <OrangeButton text={'Оформить заказ'} />
         </CartFooter>
