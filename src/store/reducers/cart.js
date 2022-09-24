@@ -18,7 +18,7 @@ const cartSlice = createSlice({
     removeFromCart(state, action) {
       state.cart = state.cart.filter((item) => item.id !== action.payload);
       state.totalCartSum = state.cart.reduce((sum, current) => {
-        return +gisum + +current.price
+        return +sum + +current.price
       }, 0);
       state.totalCartItems = state.cart.length;
     }

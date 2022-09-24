@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CartPage = styled.main`
   background-color: #161516;
   height: 100vh;
+  /* overflow: auto; */ // questions
 `;
 export const Container = styled.div`
   width: 880px;
@@ -29,9 +30,15 @@ export const HeaderTitle = styled.h1`
   line-height: 37px;
 `;
 export const CartList = styled.div`
+  height: calc(100vh - 218px);
+  overflow-x: auto;
   display: flex;
   flex-direction: column;
   gap: 33px;
+  &::-webkit-scrollbar {
+  display: none;
+  -webkit-overflow-scrolling: touch;
+  }
 `;
 export const CartItemWrapper = styled.div`
   /* width: 880px; */

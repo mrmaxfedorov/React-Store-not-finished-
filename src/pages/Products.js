@@ -8,6 +8,22 @@ import { MainPage, Container, Header, HeaderTitle, HeaderUpperRight, HeaderText,
 
 export const Products = () => {
 
+  // function getNoun(number, one, two, five) {
+  //   let n = Math.abs(number);
+  //   n %= 100;
+  //   if (n >= 5 && n <= 20) {
+  //     return five;
+  //   }
+  //   n %= 10;
+  //   if (n === 1) {
+  //     return one;
+  //   }
+  //   if (n >= 2 && n <= 4) {
+  //     return two;
+  //   }
+  //   return five;
+  // }
+
   const totalCartSum = useSelector(state => state.cart.totalCartSum)
   const totalCartItems = useSelector(state => state.cart.totalCartItems)
 
@@ -18,7 +34,7 @@ export const Products = () => {
           <HeaderTitle>НАША ПРОДУКЦИЯ</HeaderTitle>
           <HeaderUpperRight>
             <HeaderText>
-              <HeaderItems>{totalCartItems} товара</HeaderItems>
+              <HeaderItems>{totalCartItems} товаров</HeaderItems>
               <HeaderPrice>на сумму {totalCartSum} ₽</HeaderPrice>
             </HeaderText>
             <Link to='/cart'>

@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const MainPage = styled.main`
   background-color: #161516;
+  height: 100vh;
+  overflow: auto;
 `;
 export const Container = styled.div`
   width: 1302px;
@@ -44,9 +46,9 @@ export const Menu = styled.div`
   flex-wrap: wrap;
   gap: 35px;
   column-gap: 16px;
-  height: calc(100vh - 238px);
+  height: calc(100vh - 259px);
   overflow-x: auto;
-  padding-bottom: 65px;
+  padding-bottom: 80px;
 
   &::-webkit-scrollbar {
   display: none;
