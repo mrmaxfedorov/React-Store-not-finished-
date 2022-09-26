@@ -1,0 +1,71 @@
+import styled from "styled-components";
+import BackgroundImage from '../images/ItemPageBackground.svg';
+
+export const ItemPage = styled.div`
+  background-color: #161516;
+  background-image: url(${BackgroundImage});
+  height: 100vh;
+`
+export const Container = styled.div`
+  width: 1304px;
+  margin: 0 auto;
+  
+`
+export const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 55px;
+  margin-bottom: 30px;
+  min-height: 45px;
+`
+export const ArrowLeft = styled.img` 
+  cursor: pointer;
+`;
+export const Product = styled.div`
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 200px;
+`
+export const ProductImage = styled.img`
+  width: 500px;
+`
+export const ProductContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+  gap: 24px;
+`
+export const ProductTitle = styled.h2`
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 30px;
+  color: #D58C51;
+`
+export const ProductDescription = styled.p`
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+`
+export const ProductBottom = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+export const ProductPrice = styled.p`
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 23px;
+  color: white;
+`
+export const ProductWeight = styled.p`
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+  padding-right: 58px;
+`
+

@@ -26,6 +26,7 @@ export const Products = () => {
 
   const totalCartSum = useSelector(state => state.cart.totalCartSum)
   const totalCartItems = useSelector(state => state.cart.totalCartItems)
+  // const card = useSelector(state => state.card.card)
 
   return (
     <MainPage>
@@ -37,16 +38,17 @@ export const Products = () => {
               <HeaderItems>{totalCartItems} товаров</HeaderItems>
               <HeaderPrice>на сумму {totalCartSum} ₽</HeaderPrice>
             </HeaderText>
-            <Link to='/cart'>
+            <Link to='/cart' >
               <HeaderGoToCartButton src={bucketIcon} alt='' />
             </Link>
           </HeaderUpperRight>
         </Header>
         <Menu>
-          {ProductsList.map(key => {
-            const { img, name, description, price, weight } = key
+          {ProductsList.map((item) => {
+            const { id, img, name, description, price, weight } = item
             return (
               <Card
+                id={id}
                 url={img}
                 title={name}
                 description={description}

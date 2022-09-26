@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import HoveredAddIcon from '../icons/hoveredAddIcon.svg';
+import HoveredAddIcon from "../icons/hoveredAddIcon.svg";
+import addToBucketIcon from "../icons/regularAddIcon.svg";
 
 export const CardImage = styled.img`
   padding: 42px 0 30px 20px;
@@ -15,7 +16,6 @@ export const CardTitle = styled.h2`
   ${CardBigText};
   padding-right: 20px;
   margin-bottom: 9px;
-  
 `;
 export const CardPrice = styled.p`
   ${CardBigText};
@@ -48,9 +48,13 @@ export const CardBottomLeft = styled.div`
   display: flex;
   flex-direction: row;
 `;
-export const CardIcon = styled.img`
+export const CardButton = styled.button`
+  border: 0;
   width: 30px;
+  height: 30px;
   right: 30px;
+  background-image: url(${addToBucketIcon});
+  background-color: transparent;
   position: absolute;
   bottom: 32px;
   cursor: pointer;
@@ -58,25 +62,21 @@ export const CardIcon = styled.img`
     background: url(${HoveredAddIcon});
   }
 `;
-export const CardButton = styled.button`
-  padding: 0;
-  border: 0;
-`;
 export const CardWrapper = styled.div`
-  border: 1px solid #D58C51;
+  border: 1px solid #d58c51;
   width: 311px;
   height: 550px;
   position: relative;
   &:hover ${CardTitle} {
-    color: #D58C51;
+    color: #d58c51;
   }
   &:hover ${CardDescription} {
-    color: #D58C51;
+    color: #d58c51;
   }
   &:hover ${CardWeight} {
-    color: #D58C51;
+    color: #d58c51;
   }
   &:hover ${CardPrice} {
-    color: #D58C51;
+    color: #d58c51;
   }
-`
+`;

@@ -1,44 +1,66 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../store/reducers/cart';
-import addToBucketIcon from '../icons/regularAddIcon.svg';
-import { CardImage, CardTitle, CardPrice, CardDescription, CardWeight, CardBottom, CardBottomLeft, CardIcon, CardButton, CardWrapper } from './Card.styled'
+import React from "react";
+import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { passItem } from "../store/reducers/cardReducer";
+import { addToCart } from "../store/reducers/cart";
+import {
+  CardImage,
+  CardTitle,
+  CardPrice,
+  CardDescription,
+  CardWeight,
+  CardBottom,
+  CardBottomLeft,
+  CardButton,
+  CardWrapper,
+} from "./Card.styled";
 
-export const Card = ({ url, title, description, price, weight }) => {
+export const Card = ({ id, url, title, description, price, weight }) => {
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
-
-  const handleAddToCart = () => {
-
+  const handleAddToCart = (event) => {
+    event.preventDefault();
     let item = {
       id: uuidv4(),
       title: title,
+      description: description,
       url: url,
-      price: price
-    }
+      price: price,
+      weight: weight
+    };
+    dispatch(addToCart(item));
+  };
 
-    dispatch(addToCart(item))
+  const handlePassItem = () => {
+    let item = {
+      id: id,
+      title: title,
+      description: description,
+      url: url,
+      price: price,
+      weight: weight
+    }
+    dispatch(passItem(item))
   }
 
   return (
-    <CardWrapper>
-      <CardImage src={url} alt="" />
-      <CardTitle>{title}</CardTitle>
-      <CardDescription>
-        {description}
-      </CardDescription>
-      <CardBottom>
-        <CardBottomLeft>
-          <CardPrice>{price} ₽</CardPrice>
-          <CardWeight>/{weight}</CardWeight>
-        </CardBottomLeft>
-        <CardButton onClick={handleAddToCart} className="card__button">
-          <CardIcon src={addToBucketIcon} alt="" />
-        </CardButton>
-      </CardBottom>
-    </CardWrapper>
+    <Link to='/item' style={{ textDecoration: "none" }} onClick={handlePassItem}>
+      <CardWrapper>
+        <CardImage src={url} alt="" />
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+        <CardBottom>
+          <CardBottomLeft>
+            <CardPrice>{price} ₽</CardPrice>
+            <CardWeight>/ {weight}</CardWeight>
+          </CardBottomLeft>
+          <CardButton
+            onClick={handleAddToCart}
+            className="card__button"
+          ></CardButton>
+        </CardBottom>
+      </CardWrapper>
+    </Link>
   );
 };
-
-
