@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/React-Store-not-finished-/static/css/main.88081310.css",
+    "main.js": "/React-Store-not-finished-/static/js/main.723796ad.js",
+    "static/media/Montserrat-Regular.ttf": "/React-Store-not-finished-/static/media/Montserrat-Regular.2a2d37bf7680d86811db.ttf",
+    "static/media/Montserrat-Bold.ttf": "/React-Store-not-finished-/static/media/Montserrat-Bold.0915f0a8c3367a6d05ec.ttf",
+    "static/media/Montserrat-Medium.ttf": "/React-Store-not-finished-/static/media/Montserrat-Medium.647f0e61af3a76a138c3.ttf",
+    "static/media/bucketIcon.svg": "/React-Store-not-finished-/static/media/bucketIcon.0e3fc93735756c1cdd5b38b5c46d61e1.svg",
+    "index.html": "/React-Store-not-finished-/index.html",
+    "static/media/removeItemIconHovered.svg": "/React-Store-not-finished-/static/media/removeItemIconHovered.bfacee2c337d77f0d90056fb381bd578.svg",
+    "static/media/removeItemIcon.svg": "/React-Store-not-finished-/static/media/removeItemIcon.d73b984098c985939ac85e795e76e919.svg",
+    "static/media/arrowLeft.svg": "/React-Store-not-finished-/static/media/arrowLeft.2f255d59b00a38974b4f322f57dc41fe.svg",
+    "static/media/arrowLeftHovered.svg": "/React-Store-not-finished-/static/media/arrowLeftHovered.c5126c1fe10691e41029f9d2f98d9127.svg",
+    "static/media/regularAddIcon.svg": "/React-Store-not-finished-/static/media/regularAddIcon.5be90a31913997ac6d8b07dc7a250872.svg",
+    "static/media/hoveredAddIcon.svg": "/React-Store-not-finished-/static/media/hoveredAddIcon.4f175a8b645ea2d2e3c9124296739d0a.svg",
+    "main.88081310.css.map": "/React-Store-not-finished-/static/css/main.88081310.css.map",
+    "main.723796ad.js.map": "/React-Store-not-finished-/static/js/main.723796ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88081310.css",
+    "static/js/main.723796ad.js"
+  ]
+}
