@@ -1,4 +1,4 @@
-import styled from "styled-components";g
+import styled from "styled-components";
 import HoveredBackIcon from "../icons/arrowLeftHovered.svg";
 
 export const ItemPage = styled.div`
