@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
-// import {ProductsList} from '../components/Products';
 import bucketIcon from '../icons/bucketIcon.svg';
 import { ItemPage, Container, Header, ArrowLeft } from './Item.styled';
-import { HeaderUpperRight, HeaderText, HeaderItems, HeaderPrice, HeaderGoToCartButton } from './Products.styled';
+import { HeaderUpperRight, HeaderText, HeaderItems, HeaderPrice, HeaderGoToCartButton } from './Main.styled';
 import arrowBack from '../icons/arrowLeft.svg';
-import TestImage from '../images/1.png'
 import { ItemProduct } from '../components/ItemProduct';
 
 
@@ -25,8 +23,8 @@ export const Item = () => {
             </Link>
             <HeaderUpperRight>
               <HeaderText>
-                <HeaderItems>{totalCartItems} товаров</HeaderItems>
-                <HeaderPrice>на сумму {totalCartSum} ₽</HeaderPrice>
+                <HeaderItems>{totalCartItems} {(totalCartItems === 0) ? 'items' : (totalCartItems === 1) ? 'item' : 'items'}</HeaderItems>
+                <HeaderPrice>${totalCartSum.toFixed(2)}</HeaderPrice>
               </HeaderText>
               <Link to="/cart">
                 <HeaderGoToCartButton src={bucketIcon} alt="" />

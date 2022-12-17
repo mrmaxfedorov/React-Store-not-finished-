@@ -1,27 +1,32 @@
 import styled from "styled-components";
 import BackgroundImage from '../images/ItemPageBackground.svg';
+import HoveredBackIcon from "../icons/arrowLeftHovered.svg";
 
 export const ItemPage = styled.div`
-  background-color: #161516;
-  background-image: url(${BackgroundImage});
+  background-color: #fff;
+  // background-image: url(${BackgroundImage});
   height: 100vh;
 `
 export const Container = styled.div`
-  width: 1304px;
+  width: 1320px;
   margin: 0 auto;
-  
 `
 export const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 55px;
+  padding-top: 48px;
   margin-bottom: 30px;
   min-height: 45px;
 `
 export const ArrowLeft = styled.img` 
   cursor: pointer;
+  width: 50px;
+  &:hover {
+    content: url(${HoveredBackIcon});
+    font-size: 50px;
+  }
 `;
 export const Product = styled.div`
   display: flex;
@@ -39,16 +44,16 @@ export const ProductContent = styled.div`
   gap: 24px;
 `
 export const ProductTitle = styled.h2`
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-weight: 500;
-  font-size: 30px;
-  color: #D58C51;
+  font-size: 31px;
+  color: #00A87E;
 `
 export const ProductDescription = styled.p`
-  font-family: Montserrat;
-  font-weight: 400;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
   font-size: 14px;
-  color: white;
+  color: #333333;
 `
 export const ProductBottom = styled.div`
   display: flex;
@@ -56,16 +61,17 @@ export const ProductBottom = styled.div`
   align-items: center;
 `
 export const ProductPrice = styled.p`
-  font-family: Montserrat;
-  font-weight: 500;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
   font-size: 23px;
-  color: white;
+  color: #00A87E;
+  padding-right: 7px
 `
 export const ProductWeight = styled.p`
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: white;
+  color: #333333;
   padding-right: 58px;
 `
 

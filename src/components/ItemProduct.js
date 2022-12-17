@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { addToCart } from "../store/reducers/cart";
-import OrangeButton from "../components/ui/Button";
+import BigAddToCardButton from "./ui/BigAddToCardButton";
 import {
   Product,
   ProductContent,
@@ -37,9 +37,9 @@ export const ItemProduct = ({ id, url, title, description, price, weight }) => {
         <ProductTitle>{title}</ProductTitle>
         <ProductDescription>{description}</ProductDescription>
         <ProductBottom>
-          <ProductPrice>{price} P</ProductPrice>
+          <ProductPrice>${price}</ProductPrice>
           <ProductWeight> / {weight}</ProductWeight>
-          <OrangeButton text={"В корзину"} onClick={handleAddToCart} />
+          <BigAddToCardButton text={"Add to cart"} onClick={handleAddToCart} />
         </ProductBottom>
       </ProductContent>
     </Product>

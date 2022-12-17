@@ -3,13 +3,14 @@ import HoveredAddIcon from "../icons/hoveredAddIcon.svg";
 import addToBucketIcon from "../icons/regularAddIcon.svg";
 
 export const CardImage = styled.img`
-  padding: 42px 0 30px 20px;
+  padding: 25px 0 20px 0;
+  max-width: 100%;
 `;
 export const CardBigText = `
   padding-left: 21px;
-  font-weight: 500;
+  font-weight: 700;
   font-family: Montserrat;
-  color: #FFFFFF;
+  color: #00A87E;
   font-size: 17px;
 `;
 export const CardTitle = styled.h2`
@@ -22,10 +23,10 @@ export const CardPrice = styled.p`
   margin-right: 7px;
 `;
 const CardSmallText = `
-  font-weight: 400;
+  font-weight: 500;
   line-height: 20px;
   font-family: Montserrat;
-  color: #FFFFFF;
+  color: #333333;
   font-size: 14px;
 `;
 export const CardDescription = styled.p`
@@ -63,20 +64,30 @@ export const CardButton = styled.button`
   }
 `;
 export const CardWrapper = styled.div`
-  border: 1px solid #d58c51;
+  border: 1px solid #0027601F;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 0 rgb(0 39 96 / 12%);
   width: 311px;
   height: 550px;
   position: relative;
+  
+  &:hover {
+    box-shadow: 0 0 7px 0 rgb(0 39 96 / 12%);
+  }
+  
   &:hover ${CardTitle} {
-    color: #d58c51;
+    text-shadow: 1px 1px rgb(0 39 96 / 12%);
   }
+
   &:hover ${CardDescription} {
-    color: #d58c51;
+    text-shadow: 1px 1px rgb(0 39 96 / 12%);
   }
+
   &:hover ${CardWeight} {
-    color: #d58c51;
+    text-shadow: 1px 1px rgb(0 39 96 / 12%);
   }
+
   &:hover ${CardPrice} {
-    color: #d58c51;
+    text-shadow: 1px 1px rgb(0 39 96 / 12%);
   }
 `;

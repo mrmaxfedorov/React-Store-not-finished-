@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-// import CartProductsList from '../components/CartProducts'; WTF
-import {ProductsList} from '../components/Products';
 import arrowBack from '../icons/arrowLeft.svg';
-import OrangeButton from '../components/ui/Button';
+import BigAddToCardButton from '../components/ui/BigAddToCardButton';
 import { CartPage, Container, Header, ArrowLeft, HeaderTitle, CartList, ContainerBottom, CartFooter, CartTotal, CartPrice } from './Cart.styled';
 import { CartItem } from '../components/CartItem'
 import { useSelector } from 'react-redux';
@@ -20,7 +18,7 @@ export const Cart = () => {
           <Link to='/'>
             <ArrowLeft src={arrowBack} />
           </Link>
-          <HeaderTitle>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</HeaderTitle>
+          <HeaderTitle>YOUR CART</HeaderTitle>
         </Header>
         <CartList>
           {cart.map(item => {
@@ -41,9 +39,9 @@ export const Cart = () => {
       </Container>
       <ContainerBottom>
         <CartFooter>
-          <CartTotal>ЗАКАЗ НА СУММУ: <CartPrice> {totalCartSum} ₽</CartPrice>
+          <CartTotal>TOTAL: <CartPrice> ${totalCartSum.toFixed(2)}</CartPrice>
           </CartTotal>
-          <OrangeButton text={'Оформить заказ'} />
+          <BigAddToCardButton text={'Place order'} />
         </CartFooter>
       </ContainerBottom>
     </CartPage>

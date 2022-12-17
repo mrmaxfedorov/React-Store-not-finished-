@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFromCart } from '../store/reducers/cart';
 import { CartItemWrapper, CartItemImage, CartItemTitle,CartItemPrice, CartItemRemoveButton  } from '../pages/Cart.styled';
-import removeItem from '../icons/removeItemIcon.svg';
 import { passItem } from '../store/reducers/cardReducer';
 
 
@@ -33,7 +32,7 @@ export const CartItem = ({ id, url, title, description, price, weight }) => {
     <CartItemWrapper>
       <CartItemImage src={url} alt="" />
       <CartItemTitle>{title}</CartItemTitle>
-      <CartItemPrice>{price} ₽</CartItemPrice>
+      <CartItemPrice>${price}</CartItemPrice>
       <CartItemRemoveButton onClick={handleRemoveItem}>
       </CartItemRemoveButton>
     </CartItemWrapper>

@@ -4,7 +4,7 @@ import removeItemIcon from '../icons/removeItemIcon.svg';
 import removeItemIconHovered from '../icons/removeItemIconHovered.svg'
 
 export const CartPage = styled.main`
-  background-color: #161516;
+  background-color: #fff;
   height: 100vh;
   /* overflow: auto; */ // questions
 `;
@@ -24,17 +24,21 @@ export const Header = styled.div`
 `;
 export const ArrowLeft = styled.img`
   cursor: pointer;
+  width: 50px;
   &:hover {
     content: url(${HoveredBackIcon});
     font-size: 50px;
   }
 `;
 export const HeaderTitle = styled.h1`
-  font-family: Montserrat;
-  color: #ffffff;
+  position: relative;
+  top: -12px;
+  font-family: Montserrat,sans-serif;
+  color: #154891;
   font-size: 31px;
   font-weight: 700;
   line-height: 37px;
+  bottom: 20px;
 `;
 export const CartList = styled.div`
   height: calc(100vh - 218px);
@@ -42,18 +46,25 @@ export const CartList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 33px;
+  padding: 6px 8px;
   &::-webkit-scrollbar {
     display: none;
     -webkit-overflow-scrolling: touch;
   }
 `;
 export const CartItemWrapper = styled.div`
-  /* width: 880px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 0px;
+  gap: 0;
+  border: 1px solid #0027601F;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 0 rgb(0 39 96 / 12%);
+  padding: 2px 19px;
+  &:hover {
+    box-shadow: 0 0 7px 0 rgb(0 39 96 / 12%);
+  }
 `;
 export const CartItemImage = styled.img`
   width: 122px;
@@ -61,8 +72,8 @@ export const CartItemImage = styled.img`
   cursor: pointer;
 `;
 export const CartItemTitle = styled.h2`
-  font-family: Montserrat;
-  color: #ffffff;
+  font-family: Montserrat,sans-serif;
+  color: #00A87E;
   font-size: 17px;
   font-weight: 500;
   line-height: 21px;
@@ -70,8 +81,8 @@ export const CartItemTitle = styled.h2`
   cursor: pointer;
 `;
 export const CartItemPrice = styled.p`
-  font-family: Montserrat;
-  color: #d58c51;
+  font-family: Montserrat,sans-serif;
+  color: #00A87E;
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
@@ -89,7 +100,7 @@ export const CartItemRemoveButton = styled.button`
   }
 `;
 export const ContainerBottom = styled.div`
-  border-top: #d58c51 solid 1px;
+  border-top: #00A87E solid 1px;
   min-width: 100vh;
 `;
 export const CartFooter = styled.footer`
@@ -103,20 +114,19 @@ export const CartFooter = styled.footer`
 `;
 export const CartTotal = styled.p`
   position: relative;
-  color: #ffffff;
-  font-family: Montserrat;
+  color: #333333;
+  font-family: Montserrat,sans-serif;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 26px;
 `;
 export const CartPrice = styled.p`
   position: absolute;
   right: -80px;
   top: 3px;
-  color: #d58c51;
-  font-family: Montserrat;
+  color: #00A87E;
+  font-family: Montserrat,sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 22px;
-  font-family: Montserrat;
 `;

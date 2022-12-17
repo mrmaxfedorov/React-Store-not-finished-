@@ -52,7 +52,7 @@ export const Card = ({ id, url, title, description, price, weight }) => {
         <CardDescription>{description}</CardDescription>
         <CardBottom>
           <CardBottomLeft>
-            <CardPrice>{price} ₽</CardPrice>
+            <CardPrice>${price}</CardPrice>
             <CardWeight>/ {weight}</CardWeight>
           </CardBottomLeft>
           <CardButton
