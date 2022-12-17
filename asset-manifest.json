@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Store-not-finished-/static/css/main.88081310.css",
-    "main.js": "/React-Store-not-finished-/static/js/main.8793248d.js",
+    "main.js": "/React-Store-not-finished-/static/js/main.bee772de.js",
     "static/media/Montserrat-Regular.ttf": "/React-Store-not-finished-/static/media/Montserrat-Regular.2a2d37bf7680d86811db.ttf",
     "static/media/Montserrat-Bold.ttf": "/React-Store-not-finished-/static/media/Montserrat-Bold.0915f0a8c3367a6d05ec.ttf",
     "static/media/Montserrat-Medium.ttf": "/React-Store-not-finished-/static/media/Montserrat-Medium.647f0e61af3a76a138c3.ttf",
@@ -14,10 +14,10 @@
     "static/media/regularAddIcon.svg": "/React-Store-not-finished-/static/media/regularAddIcon.5be90a31913997ac6d8b07dc7a250872.svg",
     "static/media/hoveredAddIcon.svg": "/React-Store-not-finished-/static/media/hoveredAddIcon.4f175a8b645ea2d2e3c9124296739d0a.svg",
     "main.88081310.css.map": "/React-Store-not-finished-/static/css/main.88081310.css.map",
-    "main.8793248d.js.map": "/React-Store-not-finished-/static/js/main.8793248d.js.map"
+    "main.bee772de.js.map": "/React-Store-not-finished-/static/js/main.bee772de.js.map"
   },
   "entrypoints": [
     "static/css/main.88081310.css",
-    "static/js/main.8793248d.js"
+    "static/js/main.bee772de.js"
   ]
 }
