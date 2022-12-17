@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import bucketIcon from '../icons/bucketIcon.svg'
+import bucketIcon from '../icons/bucketIcon.svg';
 import {ProductsList} from '../components/ProductsList';
 import {Card} from '../components/Card';
 import {
