@@ -5,7 +5,7 @@ export const ProductsList = [
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non pulvinar lectus",
     "price":"14.99",
     "weight":"500 gr",
-    "img":"React-Store-not-finished-/images/carbonara.png"
+    "img":"images/carbonara.png"
   },
   {
     "id": "2",
@@ -13,7 +13,7 @@ export const ProductsList = [
     "description":"Ut vestibulum sodales efficitur. Cras imperdiet magna in nibh",
     "price":"19.99",
     "weight":"550 gr",
-    "img":"React-Store-not-finished-/images/bolognese.png"
+    "img":"images/bolognese.png"
   },
   {
     "id": "3",
@@ -21,7 +21,7 @@ export const ProductsList = [
     "description":"Cras quis tortor dapibus, tincidunt neque quis, imperdiet ex. Nullam arcu nisl, ultricies quis lectus",
     "price":"16.99",
     "weight":"500 gr",
-    "img":"React-Store-not-finished-/images/napolitana.png"
+    "img":"images/napolitana.png"
   },
   {
     "id": "4",
@@ -29,7 +29,7 @@ export const ProductsList = [
     "description":"Suspendisse ut mollis ipsum. Nulla imperdiet fermentum mi in rutrum. Proin volutpat dictum risus, quis blandit",
     "price":"14.99",
     "weight":"560 gr",
-    "img":"React-Store-not-finished-/images/arrabiata.png"
+    "img":"images/arrabiata.png"
   },
   {
     "id": "5",
@@ -37,7 +37,7 @@ export const ProductsList = [
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non pulvinar lectus",
     "price":"14.99",
     "weight": "500 gr",
-    "img":"React-Store-not-finished-/images/carbonara.png"
+    "img":"images/carbonara.png"
   },
   {
     "id": "6",
@@ -45,7 +45,7 @@ export const ProductsList = [
     "description":"Ut vestibulum sodales efficitur. Cras imperdiet magna in nibh",
     "price":"19.99",
     "weight":"550 gr",
-    "img":"React-Store-not-finished-/images/bolognese.png"
+    "img":"images/bolognese.png"
   },
   {
     "id": "7",
@@ -53,7 +53,7 @@ export const ProductsList = [
     "description":"Cras quis tortor dapibus, tincidunt neque quis, imperdiet ex. Nullam arcu nisl, ultricies quis lectus",
     "price":"14.99",
     "weight":"500 gr",
-    "img":"React-Store-not-finished-/images/napolitana.png"
+    "img":"images/napolitana.png"
   },
   {
     "id": "8",
@@ -61,6 +61,6 @@ export const ProductsList = [
     "description":"Suspendisse ut mollis ipsum. Nulla imperdiet fermentum mi in rutrum. Proin volutpat dictum risus, quis blandit",
     "price":"19.99",
     "weight":"560 gr",
-    "img":"React-Store-not-finished-/images/arrabiata.png"
+    "img":"images/arrabiata.png"
   },
 ]
