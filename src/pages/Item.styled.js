@@ -1,10 +1,8 @@
-import styled from "styled-components";
-import BackgroundImage from '../images/ItemPageBackground.svg';
+import styled from "styled-components";g
 import HoveredBackIcon from "../icons/arrowLeftHovered.svg";
 
 export const ItemPage = styled.div`
   background-color: #fff;
-  // background-image: url(${BackgroundImage});
   height: 100vh;
 `
 export const Container = styled.div`
